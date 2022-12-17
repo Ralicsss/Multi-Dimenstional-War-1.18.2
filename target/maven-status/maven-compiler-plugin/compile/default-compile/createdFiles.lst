@@ -1,0 +1,11 @@
+me\ralics\multidimensionalwar\Events\Onbreak.class
+me\ralics\multidimensionalwar\Scoreboard\EventManager.class
+me\ralics\multidimensionalwar\Scoreboard\TeamManager.class
+me\ralics\multidimensionalwar\Scoreboard\ScoreBoardManager.class
+me\ralics\multidimensionalwar\Events\Ondeath.class
+me\ralics\multidimensionalwar\Events\Onjoin.class
+me\ralics\multidimensionalwar\Events\Onchat.class
+me\ralics\multidimensionalwar\MainClass.class
+me\ralics\multidimensionalwar\Commands\runevent.class
+me\ralics\multidimensionalwar\Functions\ReloadScoreboard.class
+me\ralics\multidimensionalwar\Events\Ondamage.class
