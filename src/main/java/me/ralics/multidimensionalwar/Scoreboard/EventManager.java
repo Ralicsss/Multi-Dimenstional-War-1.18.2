@@ -378,7 +378,11 @@ public class EventManager {
 
     public static void ReloadScoreBoard(){
 
-        int overworldalive = 0;
+        ScoreBoardManager.scoreboard.resetScores(s3.getEntry());
+        ScoreBoardManager.scoreboard.resetScores(s4.getEntry());
+        ScoreBoardManager.scoreboard.resetScores(s5.getEntry());
+
+        overworldalive = 0;
         for (
                 OfflinePlayer offlinePlayersoverworld : TeamManager.OverWorld.getPlayers()) {
             if (offlinePlayersoverworld.getPlayer() != null && !offlinePlayersoverworld.getPlayer().isDead())
@@ -386,23 +390,28 @@ public class EventManager {
             Bukkit.broadcastMessage("1");
         }
 
-        int netheralive = 0;
+        netheralive = 0;
         for (OfflinePlayer offlinePlayersnether : TeamManager.Nether.getPlayers()) {
             if (offlinePlayersnether.getPlayer() != null && !offlinePlayersnether.getPlayer().isDead())
                 netheralive++;
             Bukkit.broadcastMessage("2");
 
         }
-        int endalive = 0;
+        endalive = 0;
         for (OfflinePlayer offlineplayersEnd : TeamManager.End.getPlayers()) {
             if (offlineplayersEnd.getPlayer() != null && !offlineplayersEnd.getPlayer().isDead())
                 endalive++;
             Bukkit.broadcastMessage("3");
 
         }
-        Score s3 = ScoreBoardManager.o.getScore(ChatColor.DARK_PURPLE + "End: " + endalive);
-        Score s4 = ScoreBoardManager.o.getScore(ChatColor.DARK_RED + "Nether: " + netheralive);
-        Score s5 = ScoreBoardManager.o.getScore(ChatColor.DARK_GREEN + "Overworld: " + overworldalive);
+
+        Score s33 = ScoreBoardManager.o.getScore(ChatColor.DARK_PURPLE + "End: " + endalive);
+        Score s43 = ScoreBoardManager.o.getScore(ChatColor.DARK_RED + "Nether: " + netheralive);
+        Score s53 = ScoreBoardManager.o.getScore(ChatColor.DARK_GREEN + "Overworld: " + overworldalive);
+
+        s3 = s33;
+        s4 = s43;
+        s5 = s53;
 
 
 
