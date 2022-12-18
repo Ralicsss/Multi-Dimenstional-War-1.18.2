@@ -2,9 +2,12 @@ package me.ralics.multidimensionalwar.Events;
 
 import org.bukkit.*;
 import org.bukkit.entity.Player;
+import org.bukkit.event.EventHandler;
+import org.bukkit.event.Listener;
 import org.bukkit.event.entity.PlayerDeathEvent;
 
-public class Ondeath {
+public class Ondeath implements Listener {
+    @EventHandler
     public static void OndeathEvent(PlayerDeathEvent e){
 
         Player p = e.getEntity();

@@ -25,10 +25,10 @@ public class EventManager {
 
     public static Score s8 = ScoreBoardManager.o.getScore(ChatColor.DARK_BLUE + "");
 
-    public static Score event1;
-    public static Score event2;
-    public static Score event3;
-    public static Score event4;
+    public static Score event1 = ScoreBoardManager.o.getScore("event1");
+    public static Score event2 = ScoreBoardManager.o.getScore("event2");
+    public static Score event3 = ScoreBoardManager.o.getScore("event3");
+    public static Score event4 = ScoreBoardManager.o.getScore("event4");
 
 
 
@@ -63,10 +63,10 @@ public class EventManager {
         s5.setScore(5);
         s6.setScore(6);
         s7.setScore(7);
-        s8.setScore(9);
+        s8.setScore(11);
         event4.setScore(8);
-        event3.setScore(10);
-        event2.setScore(11);
+        event3.setScore(9);
+        event2.setScore(10);
         event1.setScore(12);
 
 
@@ -94,10 +94,10 @@ public class EventManager {
         s5.setScore(5);
         s6.setScore(6);
         s7.setScore(7);
-        s8.setScore(9);
+        s8.setScore(11);
         event4.setScore(8);
-        event3.setScore(10);
-        event2.setScore(11);
+        event3.setScore(9);
+        event2.setScore(10);
         event1.setScore(12);
     }
     public static void eventHunger(){
@@ -123,10 +123,10 @@ public class EventManager {
         s5.setScore(5);
         s6.setScore(6);
         s7.setScore(7);
-        s8.setScore(9);
+        s8.setScore(11);
         event4.setScore(8);
-        event3.setScore(10);
-        event2.setScore(11);
+        event3.setScore(9);
+        event2.setScore(10);
         event1.setScore(12);
     }
     public static void eventWallDrop2(){
@@ -152,10 +152,10 @@ public class EventManager {
         s5.setScore(5);
         s6.setScore(6);
         s7.setScore(7);
-        s8.setScore(9);
+        s8.setScore(11);
         event4.setScore(8);
-        event3.setScore(10);
-        event2.setScore(11);
+        event3.setScore(9);
+        event2.setScore(10);
         event1.setScore(12);
     }
     public static void eventPvp(){
@@ -182,10 +182,10 @@ public class EventManager {
         s5.setScore(5);
         s6.setScore(6);
         s7.setScore(7);
-        s8.setScore(9);
+        s8.setScore(11);
         event4.setScore(8);
-        event3.setScore(10);
-        event2.setScore(11);
+        event3.setScore(9);
+        event2.setScore(10);
         event1.setScore(12);
 
         pvp = true;
@@ -214,10 +214,10 @@ public class EventManager {
         s5.setScore(5);
         s6.setScore(6);
         s7.setScore(7);
-        s8.setScore(9);
+        s8.setScore(11);
         event4.setScore(8);
-        event3.setScore(10);
-        event2.setScore(11);
+        event3.setScore(9);
+        event2.setScore(10);
         event1.setScore(12);
     }
     public static void eventBuild(){
@@ -244,10 +244,10 @@ public class EventManager {
         s5.setScore(5);
         s6.setScore(6);
         s7.setScore(7);
-        s8.setScore(9);
+        s8.setScore(11);
         event4.setScore(8);
-        event3.setScore(10);
-        event2.setScore(11);
+        event3.setScore(9);
+        event2.setScore(10);
         event1.setScore(12);
     }
     public static void eventElections(){
@@ -274,10 +274,10 @@ public class EventManager {
         s5.setScore(5);
         s6.setScore(6);
         s7.setScore(7);
-        s8.setScore(9);
+        s8.setScore(11);
         event4.setScore(8);
-        event3.setScore(10);
-        event2.setScore(11);
+        event3.setScore(9);
+        event2.setScore(10);
         event1.setScore(12);
     }
     public static void eventDisaster(){
@@ -304,10 +304,10 @@ public class EventManager {
         s5.setScore(5);
         s6.setScore(6);
         s7.setScore(7);
-        s8.setScore(9);
+        s8.setScore(11);
         event4.setScore(8);
-        event3.setScore(10);
-        event2.setScore(11);
+        event3.setScore(9);
+        event2.setScore(10);
         event1.setScore(12);
     }
     public static void TreasureIslandCoords(){
@@ -334,10 +334,10 @@ public class EventManager {
         s5.setScore(5);
         s6.setScore(6);
         s7.setScore(7);
-        s8.setScore(9);
+        s8.setScore(11);
         event4.setScore(8);
-        event3.setScore(10);
-        event2.setScore(11);
+        event3.setScore(9);
+        event2.setScore(10);
         event1.setScore(12);
     }
     public static void eventPortals(){
@@ -368,10 +368,10 @@ public class EventManager {
         s5.setScore(5);
         s6.setScore(6);
         s7.setScore(7);
-        s8.setScore(9);
+        s8.setScore(11);
         event4.setScore(8);
-        event3.setScore(10);
-        event2.setScore(11);
+        event3.setScore(9);
+        event2.setScore(10);
         event1.setScore(12);
     }
 

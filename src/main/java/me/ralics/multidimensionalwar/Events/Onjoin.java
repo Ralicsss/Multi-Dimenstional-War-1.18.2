@@ -5,12 +5,16 @@ import me.ralics.multidimensionalwar.Scoreboard.TeamManager;
 import org.bukkit.Bukkit;
 import org.bukkit.Location;
 import org.bukkit.entity.Player;
+import org.bukkit.event.EventHandler;
+import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.scoreboard.Team;
 
-public class Onjoin {
-
+public class Onjoin implements Listener {
+    @EventHandler
     public static void OnjoinEvent(PlayerJoinEvent e){
+
+
         Player p = e.getPlayer();
         for (Team t : ScoreBoardManager.scoreboard.getTeams()){
             if (t.hasEntry(p.getName())){

@@ -4,9 +4,12 @@ import me.ralics.multidimensionalwar.Scoreboard.TeamManager;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
+import org.bukkit.event.EventHandler;
+import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerChatEvent;
 
-public class Onchat {
+public class Onchat  implements Listener {
+    @EventHandler
     public static void OnchatEvent(PlayerChatEvent e){
         Player p = e.getPlayer();
 
