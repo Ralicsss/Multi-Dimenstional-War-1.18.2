@@ -1,0 +1,11 @@
+name: Multi-Dimensional-War
+version: '${project.version}'
+main: me.ralics.multidimensionalwar.MainClass
+api-version: 1.18
+prefix: MDW
+authors: [ Ralics ]
+description: This is a plugin made by Justronnie#5126 for a Minecraft Event.
+website: https://discord.gg/minecraft-events-968192619333165076
+commands:
+  runevent:
+    description: Command to run the MDW events
