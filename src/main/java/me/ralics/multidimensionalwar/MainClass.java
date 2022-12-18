@@ -23,6 +23,7 @@ public final class MainClass extends JavaPlugin {
         Bukkit.getServer().getPluginManager().registerEvents(new Ondamage(), this);
         Bukkit.getServer().getPluginManager().registerEvents(new Ondeath(), this);
         Bukkit.getServer().getPluginManager().registerEvents(new Onjoin(), this);
+        Bukkit.getServer().getPluginManager().registerEvents(new Onmove(), this);
 
         BukkitTask task = new ReloadScoreboard().runTaskTimer(this, 0L, 600L);
 

@@ -10,7 +10,7 @@ public class EventManager {
     public static boolean started = false;
     public static boolean pvp = false;
 
-
+    public static boolean portals = false;
     public static int overworldalive = 0;
     public static int netheralive = 0;
     public static int endalive = 0;
@@ -349,7 +349,7 @@ public class EventManager {
 
 
 
-
+        portals = true;
 
         ScoreBoardManager.scoreboard.resetScores(event1.getEntry());
         ScoreBoardManager.scoreboard.resetScores(event2.getEntry());

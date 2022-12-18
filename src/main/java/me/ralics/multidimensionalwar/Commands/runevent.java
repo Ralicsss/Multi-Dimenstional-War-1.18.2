@@ -2,9 +2,7 @@ package me.ralics.multidimensionalwar.Commands;
 
 import me.ralics.multidimensionalwar.Scoreboard.EventManager;
 import me.ralics.multidimensionalwar.Scoreboard.ScoreBoardManager;
-import org.bukkit.Bukkit;
-import org.bukkit.ChatColor;
-import org.bukkit.Sound;
+import org.bukkit.*;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
@@ -12,6 +10,8 @@ import org.bukkit.entity.Player;
 import org.bukkit.permissions.Permission;
 import org.bukkit.potion.PotionEffect;
 import org.bukkit.potion.PotionEffectType;
+
+import static java.awt.Color.red;
 
 public class runevent implements CommandExecutor {
     @Override
@@ -198,7 +198,8 @@ public class runevent implements CommandExecutor {
                 }
                 if (args[0].equalsIgnoreCase("12")) {
 
-
+                    EventManager.started = false;
+                    EventManager.pvp = false;
 
                     for (Player player : Bukkit.getOnlinePlayers()){
                         player.setScoreboard(ScoreBoardManager.scoreboard);
@@ -206,6 +207,13 @@ public class runevent implements CommandExecutor {
                     }
                 }
                 if (args[0].equalsIgnoreCase("13")) {
+                    World overworld = Bukkit.getWorld("world");
+                    World nether = Bukkit.getWorld("world_nether");
+                    World end = Bukkit.getWorld("world_the_end");
+                    Particle.DustOptions pepe = new Particle.DustOptions(Color.RED, 100);
+                    Location overworldloc = new Location(overworld, 100, 60, 100);
+                    Particle.DustTransition overworldparticcle = new Particle.DustTransition(Color.RED, Color.fromRGB(100, 10,10), 5.0F);
+                    overworld.spawnParticle(Particle.REDSTONE, overworldloc, 800, 0, 20, 20, pepe);
 
 
                     for (Player player : Bukkit.getOnlinePlayers()){
