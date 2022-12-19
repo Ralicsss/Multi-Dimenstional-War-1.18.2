@@ -207,13 +207,7 @@ public class runevent implements CommandExecutor {
                     }
                 }
                 if (args[0].equalsIgnoreCase("13")) {
-                    World overworld = Bukkit.getWorld("world");
-                    World nether = Bukkit.getWorld("world_nether");
-                    World end = Bukkit.getWorld("world_the_end");
-                    Particle.DustOptions pepe = new Particle.DustOptions(Color.RED, 100);
-                    Location overworldloc = new Location(overworld, 100, 60, 100);
-                    Particle.DustTransition overworldparticcle = new Particle.DustTransition(Color.RED, Color.fromRGB(100, 10,10), 5.0F);
-                    overworld.spawnParticle(Particle.REDSTONE, overworldloc, 800, 0, 20, 20, pepe);
+
 
 
                     for (Player player : Bukkit.getOnlinePlayers()){

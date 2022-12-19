@@ -2,6 +2,7 @@ package me.ralics.multidimensionalwar;
 
 import me.ralics.multidimensionalwar.Commands.runevent;
 import me.ralics.multidimensionalwar.Events.*;
+import me.ralics.multidimensionalwar.Functions.Particle;
 import me.ralics.multidimensionalwar.Functions.ReloadScoreboard;
 import me.ralics.multidimensionalwar.Scoreboard.EventManager;
 import me.ralics.multidimensionalwar.Scoreboard.ScoreBoardManager;
@@ -26,6 +27,7 @@ public final class MainClass extends JavaPlugin {
         Bukkit.getServer().getPluginManager().registerEvents(new Onmove(), this);
 
         BukkitTask task = new ReloadScoreboard().runTaskTimer(this, 0L, 600L);
+        BukkitTask task2 = new Particle().runTaskTimer(this, 0L, 30L);
 
         ScoreBoardManager.o.setDisplaySlot(DisplaySlot.SIDEBAR);
 

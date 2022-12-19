@@ -6,6 +6,7 @@ import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.entity.EntityDamageEvent;
+import org.bukkit.event.weather.LightningStrikeEvent;
 
 public class Ondamage implements Listener {
     @EventHandler
@@ -13,7 +14,9 @@ public class Ondamage implements Listener {
 
         Entity p = e.getEntity();
 
+
         if (p instanceof Player){
+
             if (EventManager.pvp == false){
                 e.setCancelled(true);
             }
