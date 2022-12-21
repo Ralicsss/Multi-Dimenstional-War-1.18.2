@@ -17,6 +17,8 @@ public final class MainClass extends JavaPlugin {
     @Override
     public void onEnable() {
         // Plugin startup logic
+
+
         getCommand("runevent").setExecutor(new runevent());
 
         Bukkit.getServer().getPluginManager().registerEvents(new Onbreak(), this);

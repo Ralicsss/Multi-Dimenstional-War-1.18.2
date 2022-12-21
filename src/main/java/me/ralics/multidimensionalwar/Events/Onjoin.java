@@ -16,10 +16,10 @@ public class Onjoin implements Listener {
 
 
         Player p = e.getPlayer();
-        for (Team t : ScoreBoardManager.scoreboard.getTeams()){
-            if (t.hasEntry(p.getName())){
+
+            if (TeamManager.End.hasEntry(p.getName()) || TeamManager.Nether.hasEntry(p.getName()) || TeamManager.OverWorld.hasEntry(p.getName())){
                 p.sendMessage("You are on a team");
-            } else if (!t.hasEntry(p.getName())) {
+            } else {
                 p.sendMessage("you are not on a team");
                 if(Bukkit.getOnlinePlayers().size() % 3 == 0){
                     TeamManager.OverWorld.addEntry(p.getName());
@@ -35,8 +35,5 @@ public class Onjoin implements Listener {
                     p.teleport(locat);
                 }
             }
-        }
-
-
     }
 }

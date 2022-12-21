@@ -18,7 +18,10 @@ public class Ondamage implements Listener {
         if (p instanceof Player){
 
             if (EventManager.pvp == false){
-                e.setCancelled(true);
+                if (e.getCause() == EntityDamageEvent.DamageCause.ENTITY_ATTACK){
+                    e.setCancelled(true);
+                }
+
             }
         }
     }
