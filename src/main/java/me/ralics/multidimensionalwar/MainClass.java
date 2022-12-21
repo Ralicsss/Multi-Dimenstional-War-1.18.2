@@ -1,5 +1,7 @@
 package me.ralics.multidimensionalwar;
 
+import me.ralics.multidimensionalwar.Commands.KingCommand;
+import me.ralics.multidimensionalwar.Commands.SetTeamCommand;
 import me.ralics.multidimensionalwar.Commands.runevent;
 import me.ralics.multidimensionalwar.Events.*;
 import me.ralics.multidimensionalwar.Functions.Particle;
@@ -20,6 +22,8 @@ public final class MainClass extends JavaPlugin {
 
 
         getCommand("runevent").setExecutor(new runevent());
+        getCommand("crownleader").setExecutor(new KingCommand());
+        getCommand("setteam").setExecutor(new SetTeamCommand());
 
         Bukkit.getServer().getPluginManager().registerEvents(new Onbreak(), this);
         Bukkit.getServer().getPluginManager().registerEvents(new Onchat(), this);

@@ -387,21 +387,18 @@ public class EventManager {
                 OfflinePlayer offlinePlayersoverworld : TeamManager.OverWorld.getPlayers()) {
             if (offlinePlayersoverworld.getPlayer() != null && !offlinePlayersoverworld.getPlayer().isDead())
                 overworldalive++;
-            Bukkit.broadcastMessage("1");
         }
 
         netheralive = 0;
         for (OfflinePlayer offlinePlayersnether : TeamManager.Nether.getPlayers()) {
             if (offlinePlayersnether.getPlayer() != null && !offlinePlayersnether.getPlayer().isDead())
                 netheralive++;
-            Bukkit.broadcastMessage("2");
 
         }
         endalive = 0;
         for (OfflinePlayer offlineplayersEnd : TeamManager.End.getPlayers()) {
             if (offlineplayersEnd.getPlayer() != null && !offlineplayersEnd.getPlayer().isDead())
                 endalive++;
-            Bukkit.broadcastMessage("3");
 
         }
 

@@ -15,15 +15,15 @@ public class Onchat  implements Listener {
 
         if (TeamManager.OverWorld.hasEntry(p.getName())){
             e.setCancelled(true);
-            Bukkit.broadcastMessage(ChatColor.DARK_GREEN + "Overworld " + p.getName() + " " + e.getMessage());
+            Bukkit.broadcastMessage(ChatColor.DARK_GREEN + "Overworld " + p.getName() + " " + ChatColor.WHITE  + e.getMessage());
         }
         if (TeamManager.End.hasEntry(p.getName())){
             e.setCancelled(true);
-            Bukkit.broadcastMessage(ChatColor.DARK_PURPLE + "End " + p.getName() + " " + e.getMessage());
+            Bukkit.broadcastMessage(ChatColor.DARK_PURPLE + "End " + p.getName() + " "  + ChatColor.WHITE + e.getMessage());
         }
         if (TeamManager.Nether.hasEntry(p.getName())){
             e.setCancelled(true);
-            Bukkit.broadcastMessage(ChatColor.DARK_RED + "Nether " + p.getName() + " " + e.getMessage());
+            Bukkit.broadcastMessage(ChatColor.DARK_RED + "Nether " + p.getName() + " " + ChatColor.WHITE + e.getMessage());
         }
 
 

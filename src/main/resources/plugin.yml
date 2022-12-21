@@ -9,3 +9,7 @@ website: https://discord.gg/minecraft-events-968192619333165076
 commands:
   runevent:
     description: Command to run the MDW events
+  setteam:
+    description: Command to set a player's team
+  crownleader:
+    description: Command to crown a player the kind of a team

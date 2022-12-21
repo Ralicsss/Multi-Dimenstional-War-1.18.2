@@ -20,25 +20,10 @@ public class Onbreak implements Listener {
         if (EventManager.started == false){
             e.setCancelled(true);
         }
-        double randDouble = Math.random();
-        if (Teams.getTeam(e.getPlayer(), TeamManager.End) == true){
-            if (randDouble <= 0.025 ){
-                ArrayList<ItemStack> ores = new ArrayList<ItemStack>();
-                ores.add(new ItemStack(Material.IRON_INGOT));
-                ores.add(new ItemStack(Material.DIAMOND));
-                ores.add(new ItemStack(Material.COAL));
-                Player p = e.getPlayer();
-                for (int i = 0; i < ores.size(); i++)
-                {
-                    // generating the index using Math.random()
-                    int index = (int)(Math.random() * ores.size());
 
-                    p.getInventory().addItem(ores.get(index));
-
-                }
             }
 
 
-        }
-    }
+
+
 }
