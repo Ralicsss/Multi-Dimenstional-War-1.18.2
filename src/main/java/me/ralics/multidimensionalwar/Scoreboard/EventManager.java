@@ -37,7 +37,7 @@ public class EventManager {
 
 
     public static void eventStart(){
-        Score eventstartscore1 = ScoreBoardManager.o.getScore(ChatColor.GREEN + "Event: Started");
+        Score eventstartscore1 = ScoreBoardManager.o.getScore(ChatColor.GREEN + "Phase: Started");
         Score eventstartscore2 = ScoreBoardManager.o.getScore(ChatColor.GREEN + "The Event has");
         Score eventstartscore3 = ScoreBoardManager.o.getScore(ChatColor.GREEN + "Begun.");
         Score eventstartscore4 = ScoreBoardManager.o.getScore(ChatColor.GREEN + "Good Luck!");
@@ -72,7 +72,7 @@ public class EventManager {
 
     }
     public static void eventWallDrop1(){
-        Score eventwalldrop1score0 = ScoreBoardManager.o.getScore(ChatColor.GREEN + "Event: Walls");
+        Score eventwalldrop1score0 = ScoreBoardManager.o.getScore(ChatColor.GREEN + "Phase: Walls");
         Score eventwalldrop1score2 = ScoreBoardManager.o.getScore(ChatColor.GREEN + "Some Of The");
         Score eventwalldrop1score3 = ScoreBoardManager.o.getScore(ChatColor.GREEN + "Walls Have");
         Score eventwalldrop1score4 = ScoreBoardManager.o.getScore(ChatColor.GREEN + "Dropped!");
@@ -101,7 +101,7 @@ public class EventManager {
         event1.setScore(12);
     }
     public static void eventHunger(){
-        Score eventhungerscore0 = ScoreBoardManager.o.getScore(ChatColor.GREEN +"Event: Hunger");
+        Score eventhungerscore0 = ScoreBoardManager.o.getScore(ChatColor.GREEN +"Phase: Hunger");
         Score eventhungerscore2 = ScoreBoardManager.o.getScore(ChatColor.GREEN +"Everyone has");
         Score eventhungerscore3 = ScoreBoardManager.o.getScore(ChatColor.GREEN +"Gotten the");
         Score eventhungerscore4 = ScoreBoardManager.o.getScore(ChatColor.GREEN +"Hunger Effect");
@@ -130,7 +130,7 @@ public class EventManager {
         event1.setScore(12);
     }
     public static void eventWallDrop2(){
-        Score eventwalldrop2score0 = ScoreBoardManager.o.getScore(ChatColor.GREEN +"Event: Walls");
+        Score eventwalldrop2score0 = ScoreBoardManager.o.getScore(ChatColor.GREEN +"Phase: Walls");
         Score eventwalldrop2score2 = ScoreBoardManager.o.getScore(ChatColor.GREEN +"Even More");
         Score eventwalldrop2score3 = ScoreBoardManager.o.getScore(ChatColor.GREEN +"Walls have");
         Score eventwalldrop2score4 = ScoreBoardManager.o.getScore(ChatColor.GREEN +"Dropped!");
@@ -160,7 +160,7 @@ public class EventManager {
     }
     public static void eventPvp(){
 
-        Score eventpvpscore0 = ScoreBoardManager.o.getScore(ChatColor.GREEN +"Event: PvP");
+        Score eventpvpscore0 = ScoreBoardManager.o.getScore(ChatColor.GREEN +"Phase: PvP");
         Score eventpvpscore2 = ScoreBoardManager.o.getScore(ChatColor.GREEN +"PvP has been");
         Score eventpvpscore3 = ScoreBoardManager.o.getScore(ChatColor.GREEN +"Turned on");
         Score eventpvpscore4 = ScoreBoardManager.o.getScore(ChatColor.GREEN +"Be careful...");
@@ -192,7 +192,7 @@ public class EventManager {
     }
     public static void eventStructureCoordinates(){
 
-        Score eventstructurecoordsscore0 = ScoreBoardManager.o.getScore(ChatColor.GREEN +"Event: Structures");
+        Score eventstructurecoordsscore0 = ScoreBoardManager.o.getScore(ChatColor.GREEN +"Phase: Structures");
         Score eventstructurecoordsscore2 = ScoreBoardManager.o.getScore(ChatColor.GREEN +"Structure Coordinates");
         Score eventstructurecoordsscore3 = ScoreBoardManager.o.getScore(ChatColor.GREEN +"Of all worlds");
         Score eventstructurecoordsscore4 = ScoreBoardManager.o.getScore(ChatColor.GREEN +"Have been revealed");
@@ -222,7 +222,7 @@ public class EventManager {
     }
     public static void eventBuild(){
 
-        Score eventbuildscore0 = ScoreBoardManager.o.getScore(ChatColor.GREEN +"Event: Building");
+        Score eventbuildscore0 = ScoreBoardManager.o.getScore(ChatColor.GREEN +"Phase: Building");
         Score eventbuildscore2 = ScoreBoardManager.o.getScore(ChatColor.GREEN +"Every world");
         Score eventbuildscore3 = ScoreBoardManager.o.getScore(ChatColor.GREEN +"Has to Build");
         Score eventbuildscore4 = ScoreBoardManager.o.getScore(ChatColor.GREEN +"Their own Town!");
@@ -252,7 +252,7 @@ public class EventManager {
     }
     public static void eventElections(){
 
-        Score eventelectionsscore0 = ScoreBoardManager.o.getScore(ChatColor.GREEN +"Event: Elections");
+        Score eventelectionsscore0 = ScoreBoardManager.o.getScore(ChatColor.GREEN +"Phase: Elections");
         Score eventelectionsscore2 = ScoreBoardManager.o.getScore(ChatColor.GREEN +"Every World");
         Score eventelectionsscore3 = ScoreBoardManager.o.getScore(ChatColor.GREEN +"Has to choose");
         Score eventelectionsscore4 = ScoreBoardManager.o.getScore(ChatColor.GREEN +"Their Leader");
@@ -312,7 +312,7 @@ public class EventManager {
     }
     public static void TreasureIslandCoords(){
 
-        Score eventtreasureislandscore0 = ScoreBoardManager.o.getScore(ChatColor.GREEN +"Event: Treasure Island");
+        Score eventtreasureislandscore0 = ScoreBoardManager.o.getScore(ChatColor.GREEN +"Phase: Treasure Island");
         Score eventtreasureislandscore2 = ScoreBoardManager.o.getScore(ChatColor.GREEN +"The coordinates");
         Score eventtreasureislandscore3 = ScoreBoardManager.o.getScore(ChatColor.GREEN +"To a treasure island");
         Score eventtreasureislandscore4 = ScoreBoardManager.o.getScore(ChatColor.GREEN +"Have been revealed!");
@@ -342,7 +342,7 @@ public class EventManager {
     }
     public static void eventPortals(){
 
-        Score eventportalsscore0 = ScoreBoardManager.o.getScore(ChatColor.GREEN +"Event: Portals");
+        Score eventportalsscore0 = ScoreBoardManager.o.getScore(ChatColor.GREEN +"Phase: Portals");
         Score eventportalsscore2 = ScoreBoardManager.o.getScore(ChatColor.GREEN +"Portals have");
         Score eventportalsscore3 = ScoreBoardManager.o.getScore(ChatColor.GREEN +"Opened to travel");
         Score eventportalsscore4 = ScoreBoardManager.o.getScore(ChatColor.GREEN +"To other worlds!");
