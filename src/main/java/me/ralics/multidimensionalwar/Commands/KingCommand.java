@@ -24,7 +24,7 @@ public class KingCommand implements CommandExecutor {
                 ItemStack goldenapple = new ItemStack(Material.GOLDEN_APPLE, 16);
                 ItemStack elytra = new ItemStack(Material.ELYTRA);
                 elytra.addUnsafeEnchantment(Enchantment.DURABILITY, 10);
-                elytra.addEnchantment(Enchantment.PROTECTION_ENVIRONMENTAL, 2);
+                elytra.addUnsafeEnchantment(Enchantment.PROTECTION_ENVIRONMENTAL, 2);
                 crown.addUnsafeEnchantment(Enchantment.PROTECTION_ENVIRONMENTAL, 5);
                 crown.addUnsafeEnchantment(Enchantment.DURABILITY, 10);
                 if (args[1].equalsIgnoreCase("overworld")){

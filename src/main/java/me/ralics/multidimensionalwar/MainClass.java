@@ -23,7 +23,7 @@ public final class MainClass extends JavaPlugin {
     @Override
     public void onEnable() {
         // Plugin startup logic
-
+        EventManager.plugin = this;
 
         getCommand("runevent").setExecutor(new runevent());
         getCommand("crownleader").setExecutor(new KingCommand());
