@@ -10,7 +10,6 @@ import org.bukkit.scheduler.BukkitRunnable;
 public class Particle extends BukkitRunnable {
     @Override
     public void run(){
-        if (EventManager.netheralive == 12131123){
             if (EventManager.portals == true) {
 
                 World overworld = Bukkit.getWorld("world");
@@ -20,7 +19,7 @@ public class Particle extends BukkitRunnable {
                 Location overworldloc = new Location(overworld, 91, 75, 183.5);
                 org.bukkit.Particle.DustTransition overworldparticcle = new org.bukkit.Particle.DustTransition(Color.RED, Color.fromRGB(100, 10, 10), 10.0F);
                 overworld.spawnParticle(org.bukkit.Particle.REDSTONE, overworldloc, 200, 0, 6, 3.5, pepe);
-        }
+
         }
     }
 }

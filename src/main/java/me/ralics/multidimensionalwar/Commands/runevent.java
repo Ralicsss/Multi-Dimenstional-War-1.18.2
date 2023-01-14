@@ -65,7 +65,7 @@ public class runevent implements CommandExecutor {
                     for (Player player : Bukkit.getOnlinePlayers()){
                         player.setScoreboard(ScoreBoardManager.scoreboard);
                         player.playSound(player, Sound.ENTITY_ENDER_DRAGON_GROWL, 1, 1);
-                        player.addPotionEffect(new PotionEffect(PotionEffectType.HUNGER, 10, 0));
+                        player.addPotionEffect(new PotionEffect(PotionEffectType.HUNGER, 12000, 0));
                     }
                 }
                 if (args[0].equalsIgnoreCase("4")) {
@@ -106,7 +106,7 @@ public class runevent implements CommandExecutor {
                     Bukkit.broadcastMessage(ChatColor.GREEN + "Revealed for every world!");
                     Bukkit.broadcastMessage(ChatColor.GREEN + "The Overworld: coord");
                     Bukkit.broadcastMessage(ChatColor.GREEN + "The Nether: coord");
-                    Bukkit.broadcastMessage(ChatColor.GREEN + "The End: coord");
+                    Bukkit.broadcastMessage(ChatColor.GREEN + "The End: -140 131 -300");
                     Bukkit.broadcastMessage(ChatColor.GOLD + "--------------------------------------------");
 
 
@@ -148,23 +148,6 @@ public class runevent implements CommandExecutor {
                 }
                 if (args[0].equalsIgnoreCase("9")) {
 
-                    EventManager.eventDisaster();
-                    EventManager.ReloadScoreBoard();
-                    Bukkit.broadcastMessage(ChatColor.GOLD + "--------------------------------------------");
-                    Bukkit.broadcastMessage(ChatColor.GREEN + "The Disaster Event!");
-                    Bukkit.broadcastMessage(ChatColor.GREEN + "No clue");
-                    Bukkit.broadcastMessage(ChatColor.GREEN + "");
-                    Bukkit.broadcastMessage(ChatColor.GREEN + "");
-                    Bukkit.broadcastMessage(ChatColor.GOLD + "--------------------------------------------");
-
-
-                    for (Player player : Bukkit.getOnlinePlayers()){
-                        player.setScoreboard(ScoreBoardManager.scoreboard);
-                        player.playSound(player, Sound.ENTITY_ENDER_DRAGON_GROWL, 1, 1);
-                    }
-                }
-                if (args[0].equalsIgnoreCase("10")) {
-
                     EventManager.TreasureIslandCoords();
                     EventManager.ReloadScoreBoard();
                     Bukkit.broadcastMessage(ChatColor.GOLD + "--------------------------------------------");
@@ -181,15 +164,17 @@ public class runevent implements CommandExecutor {
                         player.playSound(player, Sound.ENTITY_ENDER_DRAGON_GROWL, 1, 1);
                     }
                 }
-                if (args[0].equalsIgnoreCase("11")) {
+                if (args[0].equalsIgnoreCase("10")) {
 
                     EventManager.eventPortals();
                     EventManager.ReloadScoreBoard();
                     Bukkit.broadcastMessage(ChatColor.GOLD + "--------------------------------------------");
                     Bukkit.broadcastMessage(ChatColor.GREEN + "The Portal Event!");
-                    Bukkit.broadcastMessage(ChatColor.GREEN + "The Portals at every worlds' treasure");
-                    Bukkit.broadcastMessage(ChatColor.GREEN + "Island will now open for people to");
-                    Bukkit.broadcastMessage(ChatColor.GREEN + "Enter, Good Luck!");
+                    Bukkit.broadcastMessage(ChatColor.GREEN + "Portal coordinates will now be revealed for every world!");
+                    Bukkit.broadcastMessage(ChatColor.GREEN + "Overworld: eeee");
+                    Bukkit.broadcastMessage(ChatColor.GREEN + "Nether: eeee");
+                    Bukkit.broadcastMessage(ChatColor.GREEN + "End: eeee");
+                    Bukkit.broadcastMessage(ChatColor.GREEN + "Good luck!");
                     Bukkit.broadcastMessage(ChatColor.GOLD + "--------------------------------------------");
 
                     for (Player player : Bukkit.getOnlinePlayers()){
@@ -197,7 +182,17 @@ public class runevent implements CommandExecutor {
                         player.playSound(player, Sound.ENTITY_ENDER_DRAGON_GROWL, 1, 1);
                     }
                 }
-                if (args[0].equalsIgnoreCase("12")) {
+                if (args[0].equalsIgnoreCase("0")) {
+
+                    EventManager.zero();
+                    EventManager.ReloadScoreBoard();
+
+                    for (Player player : Bukkit.getOnlinePlayers()){
+                        player.setScoreboard(ScoreBoardManager.scoreboard);
+                        player.playSound(player, Sound.ENTITY_ENDER_DRAGON_GROWL, 1, 1);
+                    }
+                }
+                if (args[0].equalsIgnoreCase("resetevents")) {
                     EventManager.ReloadScoreBoard();
 
                     EventManager.started = false;
@@ -233,3 +228,26 @@ public class runevent implements CommandExecutor {
         return false;
     }
 }
+//**Minecraft Multi-Dimensional War**
+//
+//We will be hosting a Civilization event at (Time (in amount of days))
+//
+//This event will have 3 civilizations where you will have to be the last team standing!
+//It will also require fabric 1.18.2
+//
+//**React with a :check: if you want to participate in the event.**
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//

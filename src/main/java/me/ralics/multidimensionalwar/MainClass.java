@@ -16,6 +16,8 @@ import org.bukkit.scheduler.BukkitTask;
 import org.bukkit.scoreboard.DisplaySlot;
 import org.bukkit.scoreboard.Scoreboard;
 
+import java.util.Objects;
+
 public final class MainClass extends JavaPlugin {
 
     @Override
@@ -30,6 +32,14 @@ public final class MainClass extends JavaPlugin {
         TeamManager.Nether.setPrefix(ChatColor.DARK_RED + "Nether ");
         TeamManager.End.setPrefix(ChatColor.DARK_PURPLE + "End ");
         TeamManager.OverWorld.setPrefix(ChatColor.DARK_GREEN + "Overworld ");
+        TeamManager.Nether.setDisplayName(ChatColor.DARK_RED + "Nether ");
+        TeamManager.End.setDisplayName(ChatColor.DARK_PURPLE + "End ");
+        TeamManager.OverWorld.setDisplayName(ChatColor.DARK_GREEN + "Overworld ");
+
+        TeamManager.Staff.setDisplayName(ChatColor.LIGHT_PURPLE + "" + ChatColor.BOLD + "Staff " + ChatColor.RESET);
+        TeamManager.Admin.setDisplayName(ChatColor.RED + "" + ChatColor.BOLD + "Admin " + ChatColor.RESET);
+        TeamManager.Staff.setPrefix(ChatColor.LIGHT_PURPLE + "" + ChatColor.BOLD + "Staff " + ChatColor.RESET);
+        TeamManager.Admin.setPrefix(ChatColor.RED + "" + ChatColor.BOLD + "Admin " + ChatColor.RESET);
 
         Bukkit.getServer().getPluginManager().registerEvents(new Onbreak(), this);
         Bukkit.getServer().getPluginManager().registerEvents(new Onchat(), this);

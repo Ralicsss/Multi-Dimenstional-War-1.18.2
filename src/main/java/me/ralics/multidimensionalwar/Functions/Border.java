@@ -1,6 +1,7 @@
 package me.ralics.multidimensionalwar.Functions;
 
 import org.bukkit.Location;
+import org.bukkit.block.Block;
 import org.bukkit.util.Vector;
 
 public class Border {
@@ -27,6 +28,15 @@ public class Border {
         return loc.getBlockX() >= p1.getBlockX() && loc.getBlockX() <= p2.getBlockX()
                 && loc.getBlockY() >= p1.getBlockY() && loc.getBlockY() <= p2.getBlockY()
                 && loc.getBlockZ() >= p1.getBlockZ() && loc.getBlockZ() <= p2.getBlockZ();
+    }
+
+    public boolean contains(Block block){
+        if (block == null){
+            return false;
+        }
+        return block.getX() >= p1.getBlockX() && block.getX() <= p2.getBlockX()
+                && block.getY() >= p1.getBlockY() && block.getY() <= p2.getBlockY()
+                && block.getZ() >= p1.getBlockZ() && block.getZ() <= p2.getBlockZ();
     }
 
 }

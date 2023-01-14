@@ -2,6 +2,7 @@ package me.ralics.multidimensionalwar.Scoreboard;
 
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
+import org.bukkit.GameMode;
 import org.bukkit.OfflinePlayer;
 import org.bukkit.entity.Player;
 import org.bukkit.scoreboard.Score;
@@ -255,7 +256,7 @@ public class EventManager {
         Score eventelectionsscore0 = ScoreBoardManager.o.getScore(ChatColor.GREEN +"Phase: Elections");
         Score eventelectionsscore2 = ScoreBoardManager.o.getScore(ChatColor.GREEN +"Every World");
         Score eventelectionsscore3 = ScoreBoardManager.o.getScore(ChatColor.GREEN +"Has to choose");
-        Score eventelectionsscore4 = ScoreBoardManager.o.getScore(ChatColor.GREEN +"Their Leader");
+        Score eventelectionsscore4 = ScoreBoardManager.o.getScore(ChatColor.GREEN +"Their Leader!");
 
         ScoreBoardManager.scoreboard.resetScores(event1.getEntry());
         ScoreBoardManager.scoreboard.resetScores(event2.getEntry());
@@ -282,7 +283,7 @@ public class EventManager {
     }
     public static void eventDisaster(){
 
-        Score eventdisasterscore0 = ScoreBoardManager.o.getScore(ChatColor.GREEN +"");
+        Score eventdisasterscore0 = ScoreBoardManager.o.getScore(ChatColor.GREEN +"no");
         Score eventdisasterscore2 = ScoreBoardManager.o.getScore(ChatColor.GREEN +"");
         Score eventdisasterscore3 = ScoreBoardManager.o.getScore(ChatColor.GREEN +"");
         Score eventdisasterscore4 = ScoreBoardManager.o.getScore(ChatColor.GREEN +"");
@@ -310,12 +311,42 @@ public class EventManager {
         event2.setScore(10);
         event1.setScore(12);
     }
+    public static void zero(){
+
+        Score eventtreasureislandscore0 = ScoreBoardManager.o.getScore(ChatColor.GREEN +"Phase: ...");
+        Score eventtreasureislandscore2 = ScoreBoardManager.o.getScore(ChatColor.GREEN +"The event will");
+        Score eventtreasureislandscore3 = ScoreBoardManager.o.getScore(ChatColor.GREEN +"Start soon!");
+        Score eventtreasureislandscore4 = ScoreBoardManager.o.getScore(ChatColor.GREEN +"Good Luck!");
+
+        ScoreBoardManager.scoreboard.resetScores(event1.getEntry());
+        ScoreBoardManager.scoreboard.resetScores(event2.getEntry());
+        ScoreBoardManager.scoreboard.resetScores(event3.getEntry());
+        ScoreBoardManager.scoreboard.resetScores(event4.getEntry());
+
+        event1 = eventtreasureislandscore0;
+        event2 = eventtreasureislandscore2;
+        event3 = eventtreasureislandscore3;
+        event4 = eventtreasureislandscore4;
+
+        s1.setScore(1);
+        s2.setScore(2);
+        s3.setScore(3);
+        s4.setScore(4);
+        s5.setScore(5);
+        s6.setScore(6);
+        s7.setScore(7);
+        s8.setScore(11);
+        event4.setScore(8);
+        event3.setScore(9);
+        event2.setScore(10);
+        event1.setScore(12);
+    }
     public static void TreasureIslandCoords(){
 
-        Score eventtreasureislandscore0 = ScoreBoardManager.o.getScore(ChatColor.GREEN +"Phase: Treasure Island");
+        Score eventtreasureislandscore0 = ScoreBoardManager.o.getScore(ChatColor.GREEN +"Phase: Treasure Hunt");
         Score eventtreasureislandscore2 = ScoreBoardManager.o.getScore(ChatColor.GREEN +"The coordinates");
-        Score eventtreasureislandscore3 = ScoreBoardManager.o.getScore(ChatColor.GREEN +"To a treasure island");
-        Score eventtreasureislandscore4 = ScoreBoardManager.o.getScore(ChatColor.GREEN +"Have been revealed!");
+        Score eventtreasureislandscore3 = ScoreBoardManager.o.getScore(ChatColor.GREEN +"To treasure");
+        Score eventtreasureislandscore4 = ScoreBoardManager.o.getScore(ChatColor.GREEN +"Has been revealed!");
 
         ScoreBoardManager.scoreboard.resetScores(event1.getEntry());
         ScoreBoardManager.scoreboard.resetScores(event2.getEntry());
