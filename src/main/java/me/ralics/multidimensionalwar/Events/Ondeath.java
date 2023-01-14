@@ -1,5 +1,6 @@
 package me.ralics.multidimensionalwar.Events;
 
+import me.ralics.multidimensionalwar.Scoreboard.EventManager;
 import me.ralics.multidimensionalwar.Scoreboard.TeamManager;
 import org.bukkit.*;
 import org.bukkit.entity.Player;
@@ -13,8 +14,6 @@ public class Ondeath implements Listener {
 
         Player p = e.getEntity();
 
-        p.setGameMode(GameMode.SPECTATOR);
-        p.setHealth(20.0);
         World world = p.getWorld();
         Location loc = p.getLocation();
         world.strikeLightningEffect(loc);
@@ -23,6 +22,13 @@ public class Ondeath implements Listener {
         TeamManager.OverWorld.removeEntry(p.getName());
         TeamManager.Nether.removeEntry(p.getName());
         TeamManager.End.removeEntry(p.getName());
+
+        Bukkit.getScheduler().scheduleSyncDelayedTask(EventManager.plugin, new Runnable() {
+            @Override
+            public void run() {
+                Bukkit.dispatchCommand(Bukkit.getConsoleSender(),"ban "+p.getName()+" ty for playing!");
+            }
+        },20L);
 
 
     }
