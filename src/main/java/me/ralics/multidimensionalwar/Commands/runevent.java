@@ -123,10 +123,13 @@ public class runevent implements CommandExecutor {
                     Bukkit.broadcastMessage(ChatColor.GOLD + "--------------------------------------------");
                     Bukkit.broadcastMessage(ChatColor.GREEN + "The Portal Event!");
                     Bukkit.broadcastMessage(ChatColor.GREEN + "Portal coordinates will now be revealed for every world!");
-                    Bukkit.broadcastMessage(ChatColor.GREEN + "Overworld end portal: eeee");
-                    Bukkit.broadcastMessage(ChatColor.GREEN + "Overworld nether portal: eeee");
-                    Bukkit.broadcastMessage(ChatColor.GREEN + "Nether: eeee");
-                    Bukkit.broadcastMessage(ChatColor.GREEN + "End: eeee");
+                    Bukkit.broadcastMessage(ChatColor.GREEN + "Overworld end portal: 28, 70, -560");
+                    Bukkit.broadcastMessage(ChatColor.GREEN + "Overworld nether portal: 544, 105, 221");
+                    Bukkit.broadcastMessage(ChatColor.GREEN + "Nether end portal: -18, 33, 108");
+                    Bukkit.broadcastMessage(ChatColor.GREEN + "Nether nether portal: --55, 87, 344");
+                    //-55, 87, 344
+                    Bukkit.broadcastMessage(ChatColor.GREEN + "End overworld portal: -12, 100, 228");
+                    Bukkit.broadcastMessage(ChatColor.GREEN + "End nether portal: -161, 108, -10");
                     Bukkit.broadcastMessage(ChatColor.GREEN + "Good luck!");
                     Bukkit.broadcastMessage(ChatColor.GOLD + "--------------------------------------------");
 

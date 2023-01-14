@@ -6,8 +6,7 @@ import org.bukkit.event.player.PlayerPortalEvent;
 
 public class Onworld implements Listener {
     public static void onworld(PlayerPortalEvent e){
-        if (EventManager.portals == false){
-            e.setCancelled(true);
-        }
+        e.setCancelled(true);
+
     }
 }
