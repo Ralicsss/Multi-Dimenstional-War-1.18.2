@@ -40,21 +40,6 @@ public class runevent implements CommandExecutor {
                 }
                 if (args[0].equalsIgnoreCase("2")) {
 
-                    EventManager.eventWallDrop1();
-                    EventManager.ReloadScoreBoard();
-                    Bukkit.broadcastMessage(ChatColor.GOLD + "--------------------------------------------");
-                    Bukkit.broadcastMessage(ChatColor.GREEN + "Walls have dropped around");
-                    Bukkit.broadcastMessage(ChatColor.GREEN + "All of the worlds");
-                    Bukkit.broadcastMessage(ChatColor.GREEN + "Beware of dangerous structures...");
-                    Bukkit.broadcastMessage(ChatColor.GOLD + "--------------------------------------------");
-
-                    for (Player player : Bukkit.getOnlinePlayers()){
-                        player.setScoreboard(ScoreBoardManager.scoreboard);
-                        player.playSound(player, Sound.ENTITY_ENDER_DRAGON_GROWL, 1, 1);
-                    }
-                }
-                if (args[0].equalsIgnoreCase("3")) {
-
                     EventManager.eventHunger();
                     EventManager.ReloadScoreBoard();
                     Bukkit.broadcastMessage(ChatColor.GOLD + "--------------------------------------------");
@@ -65,25 +50,10 @@ public class runevent implements CommandExecutor {
                     for (Player player : Bukkit.getOnlinePlayers()){
                         player.setScoreboard(ScoreBoardManager.scoreboard);
                         player.playSound(player, Sound.ENTITY_ENDER_DRAGON_GROWL, 1, 1);
-                        player.addPotionEffect(new PotionEffect(PotionEffectType.HUNGER, 12000, 0));
+                        player.addPotionEffect(new PotionEffect(PotionEffectType.HUNGER, 12000, 1));
                     }
                 }
-                if (args[0].equalsIgnoreCase("4")) {
-
-                    EventManager.eventWallDrop2();
-                    EventManager.ReloadScoreBoard();
-                    Bukkit.broadcastMessage(ChatColor.GOLD + "--------------------------------------------");
-                    Bukkit.broadcastMessage(ChatColor.GREEN + "Even More walls have dropped");
-                    Bukkit.broadcastMessage(ChatColor.GREEN + "Around the world!");
-                    Bukkit.broadcastMessage(ChatColor.GREEN + "Good Luck!");
-                    Bukkit.broadcastMessage(ChatColor.GOLD + "--------------------------------------------");
-
-                    for (Player player : Bukkit.getOnlinePlayers()){
-                        player.setScoreboard(ScoreBoardManager.scoreboard);
-                        player.playSound(player, Sound.ENTITY_ENDER_DRAGON_GROWL, 1, 1);
-                    }
-                }
-                if (args[0].equalsIgnoreCase("5")) {
+                if (args[0].equalsIgnoreCase("3")) {
 
                     EventManager.eventPvp();
                     EventManager.ReloadScoreBoard();
@@ -97,15 +67,15 @@ public class runevent implements CommandExecutor {
                         player.playSound(player, Sound.ENTITY_ENDER_DRAGON_GROWL, 1, 1);
                     }
                 }
-                if (args[0].equalsIgnoreCase("6")) {
+                if (args[0].equalsIgnoreCase("4")) {
 
                     EventManager.eventStructureCoordinates();
                     EventManager.ReloadScoreBoard();
                     Bukkit.broadcastMessage(ChatColor.GOLD + "--------------------------------------------");
                     Bukkit.broadcastMessage(ChatColor.GREEN + "Structure coordinates will now be");
                     Bukkit.broadcastMessage(ChatColor.GREEN + "Revealed for every world!");
-                    Bukkit.broadcastMessage(ChatColor.GREEN + "The Overworld: coord");
-                    Bukkit.broadcastMessage(ChatColor.GREEN + "The Nether: coord");
+                    Bukkit.broadcastMessage(ChatColor.GREEN + "The Overworld: -186, 149, -297");
+                    Bukkit.broadcastMessage(ChatColor.GREEN + "The Nether: 256 35 120");
                     Bukkit.broadcastMessage(ChatColor.GREEN + "The End: -140 131 -300");
                     Bukkit.broadcastMessage(ChatColor.GOLD + "--------------------------------------------");
 
@@ -115,7 +85,7 @@ public class runevent implements CommandExecutor {
                         player.playSound(player, Sound.ENTITY_ENDER_DRAGON_GROWL, 1, 1);
                     }
                 }
-                if (args[0].equalsIgnoreCase("7")) {
+                if (args[0].equalsIgnoreCase("5")) {
 
                     EventManager.eventBuild();
                     EventManager.ReloadScoreBoard();
@@ -131,7 +101,7 @@ public class runevent implements CommandExecutor {
                         player.playSound(player, Sound.ENTITY_ENDER_DRAGON_GROWL, 1, 1);
                     }
                 }
-                if (args[0].equalsIgnoreCase("8")) {
+                if (args[0].equalsIgnoreCase("6")) {
 
                     EventManager.eventElections();
                     EventManager.ReloadScoreBoard();
@@ -146,32 +116,15 @@ public class runevent implements CommandExecutor {
                         player.playSound(player, Sound.ENTITY_ENDER_DRAGON_GROWL, 1, 1);
                     }
                 }
-                if (args[0].equalsIgnoreCase("9")) {
-
-                    EventManager.TreasureIslandCoords();
-                    EventManager.ReloadScoreBoard();
-                    Bukkit.broadcastMessage(ChatColor.GOLD + "--------------------------------------------");
-                    Bukkit.broadcastMessage(ChatColor.GREEN + "The TreasureIsland event!");
-                    Bukkit.broadcastMessage(ChatColor.GREEN + "Coordinates for a dangerous and filled with");
-                    Bukkit.broadcastMessage(ChatColor.GREEN + "Loot island will now be revealed!");
-                    Bukkit.broadcastMessage(ChatColor.GREEN + "The Overworld: Coords");
-                    Bukkit.broadcastMessage(ChatColor.GREEN + "The Nether: Coords");
-                    Bukkit.broadcastMessage(ChatColor.GREEN + "The End: Coords");
-                    Bukkit.broadcastMessage(ChatColor.GOLD + "--------------------------------------------");
-
-                    for (Player player : Bukkit.getOnlinePlayers()){
-                        player.setScoreboard(ScoreBoardManager.scoreboard);
-                        player.playSound(player, Sound.ENTITY_ENDER_DRAGON_GROWL, 1, 1);
-                    }
-                }
-                if (args[0].equalsIgnoreCase("10")) {
+                if (args[0].equalsIgnoreCase("7")) {
 
                     EventManager.eventPortals();
                     EventManager.ReloadScoreBoard();
                     Bukkit.broadcastMessage(ChatColor.GOLD + "--------------------------------------------");
                     Bukkit.broadcastMessage(ChatColor.GREEN + "The Portal Event!");
                     Bukkit.broadcastMessage(ChatColor.GREEN + "Portal coordinates will now be revealed for every world!");
-                    Bukkit.broadcastMessage(ChatColor.GREEN + "Overworld: eeee");
+                    Bukkit.broadcastMessage(ChatColor.GREEN + "Overworld end portal: eeee");
+                    Bukkit.broadcastMessage(ChatColor.GREEN + "Overworld nether portal: eeee");
                     Bukkit.broadcastMessage(ChatColor.GREEN + "Nether: eeee");
                     Bukkit.broadcastMessage(ChatColor.GREEN + "End: eeee");
                     Bukkit.broadcastMessage(ChatColor.GREEN + "Good luck!");

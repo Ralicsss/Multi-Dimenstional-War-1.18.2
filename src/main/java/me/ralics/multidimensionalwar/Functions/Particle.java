@@ -10,7 +10,8 @@ import org.bukkit.scheduler.BukkitRunnable;
 public class Particle extends BukkitRunnable {
     @Override
     public void run(){
-            if (EventManager.portals == true) {
+        int i = 1231231;
+            if (i == 1) {
 
                 World overworld = Bukkit.getWorld("world");
                 World nether = Bukkit.getWorld("world_nether");

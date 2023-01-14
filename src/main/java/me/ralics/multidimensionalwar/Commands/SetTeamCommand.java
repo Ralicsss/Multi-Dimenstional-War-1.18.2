@@ -26,7 +26,7 @@ public class SetTeamCommand implements CommandExecutor {
                         TeamManager.Staff.removeEntry(playername);
                         TeamManager.OverWorld.addEntry(playername);
                         World world = Bukkit.getWorld("world");
-                        Location l = new Location(world, 90, 64, 80);
+                        Location l = new Location(world, 541, 159, 303);
                         target.teleport(l);
                         p.sendMessage("Succesfully set " + playername + "'s team ");
                         p.setPlayerListName(ChatColor.DARK_GREEN + "Overworld " + p.getName());
@@ -44,7 +44,7 @@ public class SetTeamCommand implements CommandExecutor {
                         TeamManager.Staff.removeEntry(playername);
                         TeamManager.Nether.addEntry(playername);
                         World world = Bukkit.getWorld("world_nether");
-                        Location l = new Location(world, 185, 96, 166);
+                        Location l = new Location(world, 135, 70, 242);
                         target.teleport(l);
                         p.sendMessage("Succesfully set " + playername + "'s team ");
                         p.setPlayerListName(ChatColor.DARK_RED + "Nether " + p.getName());
@@ -61,7 +61,7 @@ public class SetTeamCommand implements CommandExecutor {
                         TeamManager.Staff.removeEntry(playername);
                         TeamManager.End.addEntry(playername);
                         World world = Bukkit.getWorld("world_the_end");
-                        Location l = new Location(world, -2975, 58, -1160);
+                        Location l = new Location(world, 102, 49, -2);
                         target.teleport(l);
                         p.sendMessage("Succesfully set " + playername + "'s team ");
                         p.setPlayerListName(ChatColor.DARK_PURPLE + "End " + p.getName());

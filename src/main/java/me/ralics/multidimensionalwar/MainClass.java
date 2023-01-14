@@ -48,8 +48,8 @@ public final class MainClass extends JavaPlugin {
         Bukkit.getServer().getPluginManager().registerEvents(new Onjoin(), this);
         Bukkit.getServer().getPluginManager().registerEvents(new Onmove(), this);
 
+
         BukkitTask task = new ReloadScoreboard().runTaskTimer(this, 0L, 600L);
-        BukkitTask task2 = new Particle().runTaskTimer(this, 0L, 30L);
 
         ScoreBoardManager.o.setDisplaySlot(DisplaySlot.SIDEBAR);
 

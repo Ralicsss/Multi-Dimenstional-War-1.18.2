@@ -37,11 +37,11 @@ public class Onchat  implements Listener {
         }
         if (TeamManager.Admin.hasEntry(p.getName())) {
             e.setCancelled(true);
-            Bukkit.broadcastMessage(ChatColor.RED +""+ ChatColor.BOLD + "Admin " + ChatColor.RESET +""+ ChatColor.WHITE + p.getName() +" " + ChatColor.WHITE + e.getMessage());
+            Bukkit.broadcastMessage(ChatColor.RED +""+ ChatColor.BOLD + "Admin " + ChatColor.RESET +""+ ChatColor.WHITE + p.getName() +": " + ChatColor.WHITE + e.getMessage());
         }
         if (TeamManager.Staff.hasEntry(p.getName())) {
             e.setCancelled(true);
-            Bukkit.broadcastMessage(ChatColor.LIGHT_PURPLE +""+ ChatColor.BOLD + "Staff " + ChatColor.RESET +""+ ChatColor.WHITE + p.getName() +" " + ChatColor.WHITE + e.getMessage());
+            Bukkit.broadcastMessage(ChatColor.LIGHT_PURPLE +""+ ChatColor.BOLD + "Staff " + ChatColor.RESET +""+ ChatColor.WHITE + p.getName() +": " + ChatColor.WHITE + e.getMessage());
 
         }
 

@@ -14,6 +14,7 @@ public class Ondeath implements Listener {
 
         Player p = e.getEntity();
 
+
         World world = p.getWorld();
         Location loc = p.getLocation();
         world.strikeLightningEffect(loc);
@@ -24,6 +25,7 @@ public class Ondeath implements Listener {
         TeamManager.End.removeEntry(p.getName());
 
         Bukkit.getScheduler().scheduleSyncDelayedTask(EventManager.plugin, new Runnable() {
+
             @Override
             public void run() {
                 Bukkit.dispatchCommand(Bukkit.getConsoleSender(),"ban "+p.getName()+" ty for playing!");

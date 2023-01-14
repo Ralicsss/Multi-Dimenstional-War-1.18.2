@@ -27,7 +27,7 @@ public class Onjoin implements Listener {
                     public void run() {
                         if(Bukkit.getOnlinePlayers().size() % 3 == 0){
                             TeamManager.OverWorld.addEntry(p.getName());
-                            Location loc = new Location(Bukkit.getWorld("world"), 366, 97, 339, 0, 0);
+                            Location loc = new Location(Bukkit.getWorld("world"), 541, 159, 303, 0, 0);
                             p.teleport(loc);
                             p.setPlayerListName(ChatColor.DARK_GREEN + "Overworld " + p.getName());
                             Bukkit.dispatchCommand(Bukkit.getConsoleSender(),"lp user "+p.getName()+" parent set overworld");
