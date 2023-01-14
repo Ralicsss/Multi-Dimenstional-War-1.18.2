@@ -1,5 +1,6 @@
 package me.ralics.multidimensionalwar.Scoreboard;
 
+import me.ralics.multidimensionalwar.MainClass;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.OfflinePlayer;
@@ -9,7 +10,7 @@ import org.bukkit.scoreboard.Score;
 public class EventManager {
     public static boolean started = false;
     public static boolean pvp = false;
-
+    public static MainClass plugin;
 
     public static int overworldalive = 0;
     public static int netheralive = 0;

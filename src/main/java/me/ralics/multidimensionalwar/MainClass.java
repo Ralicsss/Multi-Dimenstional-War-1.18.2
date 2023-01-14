@@ -20,7 +20,7 @@ public final class MainClass extends JavaPlugin {
         BukkitTask task = new ReloadScoreboard().runTaskTimer(this, 0L, 600L);
 
         ScoreBoardManager.o.setDisplaySlot(DisplaySlot.SIDEBAR);
-
+        EventManager.plugin = this;
     }
 
     @Override
