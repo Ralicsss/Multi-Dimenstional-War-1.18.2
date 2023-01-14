@@ -19,7 +19,7 @@ public class EventManager {
     public static int netheralive = 0;
     public static int endalive = 0;
 
-    public static Score s1 = ScoreBoardManager.o.getScore(ChatColor.YELLOW + "youtube.com/@flashmc");
+    public static Score s1 = ScoreBoardManager.o.getScore(ChatColor.YELLOW + "dsc.gg/civ");
     public static Score s2 = ScoreBoardManager.o.getScore(ChatColor.DARK_AQUA + "");
     public static Score s3 = ScoreBoardManager.o.getScore(ChatColor.DARK_PURPLE + "End: " + endalive);
     public static Score s4 = ScoreBoardManager.o.getScore(ChatColor.DARK_RED + "Nether: " + netheralive);

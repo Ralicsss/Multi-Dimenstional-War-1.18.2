@@ -10,7 +10,7 @@ public class ScoreBoardManager {
 
     public static ScoreboardManager manager = Bukkit.getScoreboardManager();
     public static Scoreboard scoreboard = manager.getNewScoreboard();
-    public static Objective o = scoreboard.registerNewObjective("MCevents", "MCevents", ChatColor.YELLOW + "MCevents");
+    public static Objective o = scoreboard.registerNewObjective("EternityEvents", "EternityEvents", ChatColor.YELLOW + "EternityEvents");
 
 
 }
