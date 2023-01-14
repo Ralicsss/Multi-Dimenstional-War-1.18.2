@@ -43,7 +43,7 @@ public class Onjoin {
                         p.setGameMode(GameMode.SURVIVAL);
                     }
                 },40L);
-                        
+
             }
         }
 
