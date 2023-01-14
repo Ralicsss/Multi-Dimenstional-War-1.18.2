@@ -30,9 +30,11 @@ public class Onjoin implements Listener {
                             Location loc = new Location(Bukkit.getWorld("world"), 366, 97, 339, 0, 0);
                             p.teleport(loc);
                             p.setPlayerListName(ChatColor.DARK_GREEN + "Overworld " + p.getName());
+                            Bukkit.dispatchCommand(Bukkit.getConsoleSender(),"lp user "+p.getName()+" parent set overworld");
                         } else if (Bukkit.getOnlinePlayers().size()%3 ==1){
                             TeamManager.Nether.addEntry(p.getName());
                             Location loca = new Location(Bukkit.getWorld("world_nether"), 135, 70, 242, 0, 0);
+                            Bukkit.dispatchCommand(Bukkit.getConsoleSender(),"lp user "+p.getName()+" parent set nether");
                             p.teleport(loca);
                             p.setPlayerListName(ChatColor.DARK_RED + "Nether " + p.getName());
                         } else if (Bukkit.getOnlinePlayers().size()%3 == 2){
@@ -40,6 +42,7 @@ public class Onjoin implements Listener {
                             Location locat = new Location(Bukkit.getWorld("world_the_end"), 102, 49, -2, 0, 0);
                             p.teleport(locat);
                             p.setPlayerListName(ChatColor.DARK_PURPLE + "End " + p.getName());
+                            Bukkit.dispatchCommand(Bukkit.getConsoleSender(),"lp user "+p.getName()+" parent set end");
                         }
                     }
                 },20L);

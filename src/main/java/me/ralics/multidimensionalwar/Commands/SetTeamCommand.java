@@ -30,6 +30,7 @@ public class SetTeamCommand implements CommandExecutor {
                         target.teleport(l);
                         p.sendMessage("Succesfully set " + playername + "'s team ");
                         p.setPlayerListName(ChatColor.DARK_GREEN + "Overworld " + p.getName());
+                        Bukkit.dispatchCommand(Bukkit.getConsoleSender(),"lp user "+p.getName()+" parent set overworld");
                         
                     }
                 }
@@ -47,6 +48,7 @@ public class SetTeamCommand implements CommandExecutor {
                         target.teleport(l);
                         p.sendMessage("Succesfully set " + playername + "'s team ");
                         p.setPlayerListName(ChatColor.DARK_RED + "Nether " + p.getName());
+                        Bukkit.dispatchCommand(Bukkit.getConsoleSender(),"lp user "+p.getName()+" parent set nether");
                     }
                 }
                 if (args[1].equalsIgnoreCase("end")){
@@ -63,6 +65,7 @@ public class SetTeamCommand implements CommandExecutor {
                         target.teleport(l);
                         p.sendMessage("Succesfully set " + playername + "'s team ");
                         p.setPlayerListName(ChatColor.DARK_PURPLE + "End " + p.getName());
+                        Bukkit.dispatchCommand(Bukkit.getConsoleSender(),"lp user "+p.getName()+" parent set end");
                     }
                 }
                 if (args[1].equalsIgnoreCase("staff")){
