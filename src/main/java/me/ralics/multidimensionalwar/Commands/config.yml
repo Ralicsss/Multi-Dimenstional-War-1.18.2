@@ -1,8 +1,13 @@
 Punishments:
     xray:
+        type: BAN
         strikes:
-            type: BAN
             1: 1d
             2: 7d
             3: 30d
             4: permanent
+    harassment:
+        type: MUTE
+        strikes:
+            1: 10m
+    
