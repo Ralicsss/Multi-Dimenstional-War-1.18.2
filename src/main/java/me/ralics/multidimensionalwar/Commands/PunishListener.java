@@ -13,7 +13,9 @@ public class PunishListener implements Listener{
             int clickedData = event.getClicked().getItemMeta().getCustomModelData();
         }
 
-        if (!name.equalsIgnorecase("player's offenses") || !name.equalsIgnorecase("Punishment GUI") || !name.equalsIgnorecase("
+        if (!name.equalsIgnorecase("player's offenses") || !name.equalsIgnorecase("Punishment GUI") || !name.equalsIgnorecase("") || !name.equalsIgnorecase(""){
+            return true;
+        }
 
         switch(clickedData){
             case 1:
@@ -26,6 +28,7 @@ public class PunishListener implements Listener{
                 PunishHelper.addPunishment(target, event.getClickedItem());
                 return true;
         }
+        return true;
     }
 
     @EventHandler
