@@ -20,7 +20,40 @@ public class PunishListener implements Listener{
                 return openPunish(clicker, target);
             case 3:
                 return addNote(clicker, target);
+            case > 3:
+                PunishHelper.addPunishment(target, event.getClickedItem());
+                return true;
         }
+    }
+
+    @EventHandler
+    public void chatMessage(AsyncChatMessageEvent event){
+        Player player = event.getPlayer();
+        if (!PunishHelper.addingNote(player){
+            return;
+        }
+
+        event.setCancelled(true);
+        Player target = PunishHelper.getNoted(player);
+        String message = event.getMessage;
+
+        PunishHelper.addNote(target, message);
+        player.sendMessage(ChatColor.GREEN + "Successfully added note: " + message + " to player: " + target.getName();
+    }
+
+    private boolean openPunish(Player player, Ppayer target){
+        Inventory gui = PunishHelper.getPunishGUI();
+        player.openInventory(gui);
+        returm true;
+    }
+
+    private boolean addNote(Player player, Player target){
+        PunishHelper.adding(player);
+        PunishHelper.noted(target);
+
+        player.closeInventory();
+        player.sendTitle(ChatColor.GREEN + "Please type your note in chat", "")
+        return true;
     }
 
     private boolean openHistory(Player player, Player target){
@@ -36,34 +69,5 @@ public class PunishListener implements Listener{
         }
         player.openInventory(inventory);
         return true;
-    }
-
-    private boolean registerPunishGUI(){
-        String basicColor = ChatColor.DARK_RED + "" + ChatColor.BOLD;
-        Material mat = Material.PAPER;
-        ItemStack hackedClient = createItem(basicColor + "Hacked Client", mat, 4);
-        ItemStack xray = createItem(basicColor + "Xray", mat, 5);
-        ItemStack spamming = createItem(basicColor + "Spamming", mat, 6);
-        ItemStack discrimination = createItem(basicColor + "Discrimination", mat, 7);
-        ItemStack griefing = createItem(basicColor + "Griefing", mat, 8);
-        ItemStack swearing = createItem(basicColor + "Swearing", mat, 9);
-        ItemStack hackusating = createItem(basicColor + "Hackusating", mat, 10);
-        punishments.put(hackusating, Punishment.HACKUSATING);
-        punishments.put(hackedClient, Punishment.HACKED_CLIENT);
-        punishments.put(xray, Punishments.XRAY)
-        punishments.put(spamming, Punishments.SPAM);
-        punishments.put(swearing, Punishments.SWEARING);
-        punishments.put(discrimination, Punishments.DISCRIMINATION);
-        return true;
-    }
-
-    private ItemStack createItem(String itemName, Material material, List<String> lore, int customModelData){
-        ItemStack result = new ItemStack(material);
-        ItemMeta meta = result.getItemMeta();
-        result.setDisplayName(itemName);
-        meta.setCustomModelData(customModelData);
-        meta.setLore(lore);
-        result.setItemMeta(meta);
-        return result;
     }
 }
