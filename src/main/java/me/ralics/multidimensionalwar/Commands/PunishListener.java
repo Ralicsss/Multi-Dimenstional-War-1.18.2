@@ -1,18 +1,20 @@
 public class PunishListener implements Listener{
     @EventHandler
     public boolean onClick(InventoryClickEvent event){
-        if (!event.getClickedInventory().getName().contains("gui"){ //Change Later to all inventory names
-            return;
+        String name = event.getClickedInventory().getName();
+        if (name.equalsIgnoreCase("Punishment GUI")){ //Change Later to all inventory names
+            event.setCancelled(true);
+
+            ItemStack skull = event.getClickedInventory().getItem(5);
+            SkullMeta skullMeta = (SkullMeta) skull.getItemMeta();
+        
+            Player target = skullMeta.getOwner();
+            Player clicker = (Player) event.getClicker();
+            int clickedData = event.getClicked().getItemMeta().getCustomModelData();
         }
 
-        event.setCancelled(true);
+        if (!name.equalsIgnorecase("player's offenses") || !name.equalsIgnorecase("Punishment GUI") || !name.equalsIgnorecase("
 
-        ItemStack skull = event.getClickedInventory().getItem(5);
-        SkullMeta skullMeta = (SkullMeta) skull.getItemMeta();
-        
-        Player target = skullMeta.getOwner();
-        Player clicker = (Player) event.getClicker();
-        int clickedData = event.getClicked().getItemMeta().getCustomModelData();
         switch(clickedData){
             case 1:
                 return openHistory(clicker, target);
@@ -54,6 +56,7 @@ public class PunishListener implements Listener{
         returm true;
     }
 
+
     private boolean addNote(Player player, Player target){
         PunishHelper.adding(player);
         PunishHelper.noted(target);
@@ -64,7 +67,7 @@ public class PunishListener implements Listener{
     }
 
     private boolean openHistory(Player player, Player target){
-        Inventory inventory = Bukkit.getNewInventory(null, 36, target.getName() + " 's offenses")
+        Inventory inventory = Bukkit.getNewInventory(null, 36, ChatColor.RED + "player's offenses")
         List<String> previousOffenses = Helper.getOffenses(target);
         int noteNumber = 0;
         for(String offense : previousOffenses){
