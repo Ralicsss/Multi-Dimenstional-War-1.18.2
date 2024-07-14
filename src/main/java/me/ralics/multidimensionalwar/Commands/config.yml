@@ -1,1 +1,8 @@
-c
+Punishments:
+    xray:
+        strikes:
+            type: BAN
+            1: 1d
+            2: 7d
+            3: 30d
+            4: permanent
