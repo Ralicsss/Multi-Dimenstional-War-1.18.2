@@ -71,4 +71,22 @@ public class PunishHelper{
         Punishments punishmentToAdd = punisments.get(item);
         PunishFile.addPunishmentToPlayer(target, punishmentToAdd);
     }
+
+    private ItemStack createSkull(Player owner){
+        ItemStack skull = new ItemStack(Material.PLAYER_HEAD;)
+        SkullMeta skullMeta = (SkullMeta) skull.getItemMeta();
+        skullMeta.setOwner(player);
+        skull.setItemMeta(skullMeta;)
+        skull.setDisplayName(ChatColor.GOLD + owner.getName());
+        return skull;
+    }
+
+    private ItemStack createItem(Material material, String name, int customModelData){
+        ItemStack result = new ItemStack(material);
+        ItemMeta meta = result.getItemMeta();
+        meta.setCustomModelData(customModelData);
+        result.setItemMeta(meta);
+        result.setDisplayName(name);
+        return result;
+    }
 }
