@@ -15,8 +15,8 @@ public class PunishHelper{
         ItemStack griefing = createItem(basicColor + "Griefing", mat, 8);
         ItemStack swearing = createItem(basicColor + "Swearing", mat, 9);
         ItemStack hackusating = createItem(basicColor + "Hackusating", mat, 10);
-        punishments.put(hackusating, Punishment.HACKUSATING);
-        punishments.put(hackedClient, Punishment.HACKED_CLIENT);
+        punishments.put(hackusating, Punishments.HACKUSATING);
+        punishments.put(hackedClient, Punishment.sHACKED_CLIENT);
         punishments.put(xray, Punishments.XRAY)
         punishments.put(spamming, Punishments.SPAM);
         punishments.put(swearing, Punishments.SWEARING);
