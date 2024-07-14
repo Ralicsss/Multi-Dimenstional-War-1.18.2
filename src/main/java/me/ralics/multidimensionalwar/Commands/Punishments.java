@@ -5,8 +5,8 @@ public class Punishments{
     public static Punishment SPAM;
     public static Punishment SWEARING;
     public static Punishment HACKED_CLIENT;
-    public static Punishment HACKUSATING;
-    public static Punishment HACKUSATING;
+    public static Punishment DISCRIMINATION;
+    public static Punishment GRIEFING;
 
     private Punishments INSTANCE;
 
