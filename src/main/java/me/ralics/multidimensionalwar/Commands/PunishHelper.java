@@ -1,6 +1,7 @@
 public class PunishHelper{
     private static HashMap<ItemStack, Punishments> punishments = new HashMap<>();
     private static Inventory punishGUI;
+    private static HashMap<Player, Player> currentlyNoting = new HashMap<>();
 
     private boolean registerPunishGUI(){
         punishGUI = Bukkit.getNewInventory(null, 27, ChatColor.RED + "Select a Punishment");
@@ -56,5 +57,18 @@ public class PunishHelper{
         registerEvents();
         registerCommands();
         registerPunishGUI();        
+    }
+
+    public static void adding(Player player, Player noted){
+        currentlyNoting.put(player, noted);
+    }
+
+    public static boolean isNoting(Player player){
+        return currentlyNoting.keySet().contains(player);
+    }
+
+    public static void addPunishment(ItemStack item, Player target){
+        Punishments punishmentToAdd = punisments.get(item);
+        PunishFile.addPunishmentToPlayer(target, punishmentToAdd);
     }
 }
