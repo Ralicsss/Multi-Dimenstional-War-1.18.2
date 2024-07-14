@@ -2,6 +2,7 @@ public class PunishHelper{
     private static HashMap<ItemStack, Punishments> punishments = new HashMap<>();
     private static Inventory punishGUI;
     private static HashMap<Player, Player> currentlyNoting = new HashMap<>();
+    private static HashMap<Player, Integer> mutedPlayers = new HashMap<>();
 
     private boolean registerPunishGUI(){
         punishGUI = Bukkit.getNewInventory(null, 27, ChatColor.RED + "Select a Punishment");
@@ -24,8 +25,9 @@ public class PunishHelper{
         int number = 0;
         for (ItemStack item : punishments.keySet()){
             //number = number + distance;
-            number++; //better option
+             //better option
             inventory.setItem(item, number);
+            number++;
         }
         return true;
     }
@@ -72,7 +74,7 @@ public class PunishHelper{
         PunishFile.addPunishmentToPlayer(target, punishmentToAdd);
     }
 
-    private ItemStack createSkull(Player owner){
+    public static ItemStack createSkull(Player owner){
         ItemStack skull = new ItemStack(Material.PLAYER_HEAD;)
         SkullMeta skullMeta = (SkullMeta) skull.getItemMeta();
         skullMeta.setOwner(player);
@@ -81,12 +83,31 @@ public class PunishHelper{
         return skull;
     }
 
-    private ItemStack createItem(Material material, String name, int customModelData){
+    public static ItemStack createItem(Material material, String name, int customModelData){
         ItemStack result = new ItemStack(material);
         ItemMeta meta = result.getItemMeta();
         meta.setCustomModelData(customModelData);
         result.setItemMeta(meta);
         result.setDisplayName(name);
         return result;
+    }
+
+    public static boolean isMuted(Player player){
+        return mutedPlayers.keySet().contains(player);
+    }
+
+    public static void mutePlayer(Player player, int timeInSeconds){
+        mutedPlayers.put(player,timeInSeconds);
+        int timeRemaining = timeInSeconds;
+        BukkitRunnable muteRunnable = new BukkitRunnable(
+            @Override
+            public void run(){
+                timeRemaining--;
+                mutedPlayers.put(player, timeRemaining);
+                if (timeRemaining <= 0){
+                    mutedPlayers.remove(player, timeRemaining);
+                    this.cancel;
+                }
+            });
     }
 }
