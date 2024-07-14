@@ -29,6 +29,13 @@ public class PunishListener implements Listener{
     @EventHandler
     public void chatMessage(AsyncChatMessageEvent event){
         Player player = event.getPlayer();
+
+        if (PunishHelper.isMuted(player)){
+            event.setCancelled(true);
+            player.sendMessage(ChatColor.RED + "You have been muted, you will be unmuted in: " + PunishHelper.getMutedTime(player));
+            return;
+        }
+
         if (!PunishHelper.addingNote(player){
             return;
         }
