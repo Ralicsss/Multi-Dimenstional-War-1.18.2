@@ -1,6 +1,7 @@
 public class PunishHelper{
     private static HashMap<ItemStack, Punishments> punishments = new HashMap<>();
-    public static Inventory punishGUI;
+    private static Inventory punishGUI;
+
     private boolean registerPunishGUI(){
         punishGUI = Bukkit.getNewInventory(null, 27, ChatColor.RED + "Select a Punishment");
         String basicColor = ChatColor.DARK_RED + "" + ChatColor.BOLD;
@@ -26,5 +27,34 @@ public class PunishHelper{
             inventory.setItem(item, number);
         }
         return true;
+    }
+
+    public static Inventory getPunishGUI(){
+        return punishGUI.copy();
+    }
+
+    private ItemStack createItem(String itemName, Material material, List<String> lore, int customModelData){
+        ItemStack result = new ItemStack(material);
+        ItemMeta meta = result.getItemMeta();
+        meta.setDisplayName(itemName);
+        meta.setCustomModelData(customModelData);
+        meta.setLore(lore);
+        result.setItemMeta(meta);
+        return result;
+    }
+
+    private void registerCommands(){
+        Vars.PLUGIN.getCommand("punish").setExectuor(new PunishCommand);
+        Vars.PLUGIN.getCommand("punish").setTabCompleter(new PunishCommand);
+    }
+
+    private void registerEvents(){
+        Bukkit.getPluginManager().registerEvents(Vars.PLUGIN, new PunishListener);
+    }
+
+    public static void registerAll(){
+        registerEvents();
+        registerCommands();
+        registerPunishGUI();        
     }
 }
