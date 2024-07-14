@@ -19,11 +19,11 @@ public class PunishHelper{
         punishments.put(spamming, Punishments.SPAM);
         punishments.put(swearing, Punishments.SWEARING);
         punishments.put(discrimination, Punishments.DISCRIMINATION);
-        int distance = 27 / punishments.keySet().size;
+        //int distance = 27 / punishments.keySet().size;
         int number = 0;
         for (ItemStack item : punishments.keySet()){
-            number = number + distance;
-            //number++; better option
+            //number = number + distance;
+            number++; //better option
             inventory.setItem(item, number);
         }
         return true;
